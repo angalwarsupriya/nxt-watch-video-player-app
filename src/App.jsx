@@ -6,7 +6,7 @@ import Trending from './components/Trending';
 import Gaming from './components/Gaming';
 import SavedVideos from './components/SavedVideos';
 import VideoItemDetails from './components/VideoItemDetails';
-import NotFound from './components/NotFound/INDEX.JSX';
+import NotFound from './components/NotFound';
 //import About from './components/Header'
 import './App.css';
 
