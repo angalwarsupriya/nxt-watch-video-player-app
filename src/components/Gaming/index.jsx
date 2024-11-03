@@ -6,7 +6,7 @@ import { ThreeDots } from 'react-loader-spinner';
 
 import Header from '../Header';
 import SideBar from '../SideBar';
-import GamingVideoTumbnail from '../GamingVideoTumbnail/INDEX.JSX';
+import GamingVideoTumbnail from '../GamingVideoTumbnail';
 
 import {
   GamingRouteBgCon,
