@@ -75,23 +75,23 @@ function Login() {
           <Logo alt="website logo" src={logoUrl} />
           <Form onSubmit={onSubmitForm}>
             <LoginInputCon>
-              <Label htmlFor="username">USERNAME</Label>
+              <Label htmlFor="username" isThemeLight={isThemeLight}>USERNAME</Label>
               <Input
                 id="username"
                 type="text"
                 className="login-input"
-                placeholder="Username"
+                placeholder="Use Username: rahul"
                 value={name}
                 onChange={onChangeName}
               />
             </LoginInputCon>
             <LoginInputCon>
-              <Label htmlFor="password">PASSWORD</Label>
+              <Label htmlFor="password" isThemeLight={isThemeLight}>PASSWORD</Label>
               <PasswordInput
                 id="password"
                 type={showPassword ? 'text' : 'password'}
                 value={password}
-                placeholder="Password"
+                placeholder="Use Password: rahul@2021"
                 onChange={onChangePassword}
               />
             </LoginInputCon>
@@ -102,7 +102,7 @@ function Login() {
                 type="checkbox"
                 onChange={onChangeCheckbox}
               />
-              <Label htmlFor="show">Show Password</Label>
+              <Label isThemeLight={isThemeLight} htmlFor="show" >Show Password</Label>
             </CheckBoxCon>
             <Button type="submit">Login</Button>
 

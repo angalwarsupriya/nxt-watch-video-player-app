@@ -63,14 +63,14 @@ export const Label = styled.label`
     font-size: 11px;
   }
 `;
+
 export const Input = styled.input`
   height: 26px;
   width: 90%;
   font-size: 10px;
   margin-bottom: 20px;
-  outline: none;
   background-color: transparent;
-  color: ${(props) => (props.isThemeLight ? '#181818' : '#ffffff')};
+  color: gray;
   @media (min-width: 768px) {
     height: 32px;
     width: 100%;
@@ -84,6 +84,7 @@ export const PasswordInput = styled.input`
   margin-bottom: 20px;
   outline: none;
   background-color: transparent;
+  color: gray;
   @media (min-width: 768px) {
     height: 32px;
     width: 100%;
@@ -94,8 +95,7 @@ export const CheckBoxCon = styled.div`
   align-self: flex-start;
   display: flex;
   align-items: center;
-  background-color: transparent;
-`;
+`
 export const CheckBoxInput = styled.input`
   height: 18px;
   width: 18px;

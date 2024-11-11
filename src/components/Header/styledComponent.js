@@ -81,6 +81,7 @@ export const LogoutBtn = styled.button`
   height: 35px;
   width: 70px;
   border: 2px solid;
+  margin-right: 20px;
   color: ${(props) => (props.isThemeLight ? '#000000' : '#ffffff')};
   border-color: ${(props) => (props.isThemeLight ? '#000000' : '#ffffff')};
   background-color: transparent;

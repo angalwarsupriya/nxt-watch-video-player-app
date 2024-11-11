@@ -15,7 +15,6 @@ import { RiMenuAddLine } from 'react-icons/ri';
 import { IoCloseSharp } from 'react-icons/io5';
 import { FaMoon } from 'react-icons/fa';
 //import react popup
-import React from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 //importing styles
@@ -258,7 +257,7 @@ function Header() {
             borderRadius: '10px',
             padding: '10px',
             background: popupBackgroundColor,
-            width: '50%',
+            width: '70%',
           }}
           trigger={
             <LinkBtn>
@@ -275,7 +274,7 @@ function Header() {
                 {isThemeLight ? (
                   <button
                     type="button"
-                    class="btn btn-outline-dark"
+                    className="btn btn-outline-dark"
                     data-testid="close"
                     onClick={() => close()}
                   >
@@ -284,7 +283,7 @@ function Header() {
                 ) : (
                   <button
                     type="button"
-                    class="btn btn-outline-light"
+                    className="btn btn-outline-light"
                     data-testid="close"
                     onClick={() => close()}
                   >
@@ -293,7 +292,7 @@ function Header() {
                 )}
                 <button
                   type="button"
-                  class="btn btn-primary"
+                  className="btn btn-primary"
                   onClick={confirmLogout}
                 >
                   Confirm
@@ -323,9 +322,9 @@ function Header() {
           trigger={<LogoutBtn isThemeLight={isThemeLight}>Logout</LogoutBtn>}
           contentStyle={{
             borderRadius: '10px',
-            padding: '10px',
             background: popupBackgroundColor,
-            width: '30%',
+            width: '20%',
+            height: '20%',
           }}
         >
           {(close) => (
@@ -337,7 +336,7 @@ function Header() {
                 {isThemeLight ? (
                   <button
                     type="button"
-                    class="btn btn-outline-dark"
+                    className="btn btn-outline-dark"
                     data-testid="close"
                     onClick={() => close()}
                   >
@@ -346,8 +345,8 @@ function Header() {
                 ) : (
                   <button
                     type="button"
-                    class="btn btn-outline-light"
                     data-testid="close"
+                    className="btn btn-outline-light"
                     onClick={() => close()}
                   >
                     Cancel
@@ -355,7 +354,7 @@ function Header() {
                 )}
                 <button
                   type="button"
-                  class="btn btn-primary"
+                  className="btn btn-primary"
                   onClick={confirmLogout}
                 >
                   Confirm
