@@ -8,7 +8,6 @@ import Cookies from 'js-cookie';
 import { IoCloseSharp } from 'react-icons/io5';
 import { IoIosSearch } from 'react-icons/io';
 import { ThreeDots } from 'react-loader-spinner';
-
 import HomeVidoeThumbnailCard from '../HomeVidoeThumbnailCard';
 
 import {
