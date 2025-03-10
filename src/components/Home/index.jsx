@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import Header from '../Header';
 import SideBar from '../SideBar';
 
@@ -48,6 +49,11 @@ const status = {
 };
 
 function Home() {
+  const jwtToken = Cookies.get('jwt_token');
+  const navigate = useNavigate();
+  if (jwtToken === undefined) {
+    navigate('/login');
+  }
   const isThemeLight = useSelector((store) => store.themeStatus.isThemeLight);
 
   const [allVideosList, setAllVideosList] = useState([]);
@@ -57,9 +63,8 @@ function Home() {
 
   const getAllViews = async () => {
     setPageStatus(status.loading);
-
     const apiUrl = `https://apis.ccbp.in/videos/all?search=${searchString}`;
-    const jwtToken = Cookies.get('jwt_token');
+
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -240,7 +245,7 @@ function Home() {
               {displayViewBasedOnStatus()}
             </HomeResult>
           </Bottomcon>
-       </HomeRightCon>
+        </HomeRightCon>
       </HomeCon>
     </HomeBgCon>
   );

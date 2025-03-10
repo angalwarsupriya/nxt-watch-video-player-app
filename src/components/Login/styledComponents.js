@@ -57,7 +57,7 @@ export const LoginInputCon = styled.div`
 export const Label = styled.label`
   font-family: Roboto;
   margin-top: 8x;
-  margin-bottom: 2px;
+  margin-bottom: 0.4px;
   color: ${(props) => (props.isThemeLight ? '#606060' : '#ffffff')};
   @media (min-width: 768px) {
     font-size: 11px;
@@ -71,6 +71,7 @@ export const Input = styled.input`
   margin-bottom: 20px;
   background-color: transparent;
   color: gray;
+  padding-left: 10px;
   @media (min-width: 768px) {
     height: 32px;
     width: 100%;
@@ -85,6 +86,7 @@ export const PasswordInput = styled.input`
   outline: none;
   background-color: transparent;
   color: gray;
+  padding-left: 10px;
   @media (min-width: 768px) {
     height: 32px;
     width: 100%;
@@ -95,12 +97,15 @@ export const CheckBoxCon = styled.div`
   align-self: flex-start;
   display: flex;
   align-items: center;
-`
+`;
 export const CheckBoxInput = styled.input`
   height: 18px;
   width: 18px;
   outline: none;
   border: 1px solid black;
+  background-color: blue;
+  margin-right: 5px;
+  margin-top: 0px;
   @media (min-width: 768px) {
     height: 18px;
     width: 18px;
@@ -109,8 +114,8 @@ export const CheckBoxInput = styled.input`
 export const Button = styled.button`
   height: 30px;
   width: 100%;
-  background-color: #3b82f6;
-  font-size: 12px;
+  background-color: #3b82f8;
+  font-size: 15px;
   font-family: Roboto;
   color: #ffffff;
   border-radius: 5px;
@@ -120,6 +125,6 @@ export const Button = styled.button`
   color: '#ffffff';
   @media (min-width: 768px) {
     height: 40px;
-    font-size: 10px;
+    font-size: 15px;
   }
 `;

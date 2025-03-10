@@ -2,8 +2,8 @@ import Cookies from 'js-cookie';
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { SiYoutubegaming } from 'react-icons/si';
-import { ThreeDots } from 'react-loader-spinner';
-
+import { ThreeDots } from 'react-loader-spinner'
+import { useNavigate } from 'react-router-dom';
 import Header from '../Header';
 import SideBar from '../SideBar';
 import GamingVideoTumbnail from '../GamingVideoTumbnail';
@@ -26,6 +26,7 @@ import {
   LoadingCon,
 } from './styledComponent';
 
+
 const status = {
   initial: 'INITIAL',
   loading: 'LOADING',
@@ -34,6 +35,11 @@ const status = {
 };
 
 function Gaming() {
+  const jwtToken = Cookies.get('jwt_token');
+  const navigate = useNavigate();
+  if (jwtToken === undefined) {
+    navigate('/login');
+  }
   const isThemeLight = useSelector((store) => store.themeStatus.isThemeLight);
   const [allVideosList, setAllVideosList] = useState([]);
   const [pageStatus, setPageStatus] = useState(status.initial);
@@ -46,8 +52,6 @@ function Gaming() {
 
   const getGamingVideosData = async () => {
     setPageStatus(status.loading);
-    const jwtToken = Cookies.get('jwt_token');
-
     const apiUrl = 'https://apis.ccbp.in/videos/gaming';
 
     const options = {

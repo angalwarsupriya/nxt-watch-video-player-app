@@ -5,6 +5,7 @@ import SideBar from '../SideBar';
 
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import {
   TotalCon,
@@ -29,6 +30,11 @@ const status = {
 };
 
 function SavedVideos() {
+  const jwtToken = Cookies.get('jwt_token');
+  const navigate = useNavigate();
+  if (jwtToken === undefined) {
+    navigate('/login');
+  }
   const isThemeLight = useSelector((store) => store.themeStatus.isThemeLight);
   const savedVideosList = useSelector(
     (store) => store.savedVideosListStatus.savedVideosList,

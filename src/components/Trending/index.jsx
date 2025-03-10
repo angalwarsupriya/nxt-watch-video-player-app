@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { HiFire } from 'react-icons/hi';
 import { useState, useEffect } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
-
+import { useNavigate } from 'react-router-dom';
 import VideoTubnailCard from '../VideoTubnailCard';
 import Header from '../Header';
 import SideBar from '../SideBar';
@@ -35,8 +35,13 @@ const status = {
 };
 
 // trending vidieos list
-console.log();
+
 function Trending() {
+  const jwtToken = Cookies.get('jwt_token');
+  const navigate = useNavigate();
+  if (jwtToken === undefined) {
+    navigate('/login');
+  }
   const isThemeLight = useSelector((store) => store.themeStatus.isThemeLight);
 
   const [allVideosList, setAllVideosList] = useState([]);
